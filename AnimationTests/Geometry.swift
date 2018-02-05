@@ -305,3 +305,10 @@ extension CGPoint {
         return dot(other.normalized)
     }
 }
+
+extension CGVector {
+    static func from(_ point: CGPoint) -> CGVector { return .init(point) }
+    init(_ point: CGPoint) {
+        self.init(dx: point.x, dy: point.y)
+    }
+}
